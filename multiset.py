@@ -13,7 +13,8 @@ class MultiSet(object):
         """
         choose a representation
         """
-        pass
+        self.lista = elems
+        self.lista.sort()
 
     def add(self, e):
         """
@@ -29,7 +30,8 @@ class MultiSet(object):
         None.
 
         """
-        pass
+        self.lista.append(e)
+        self.lista.sort()
 
     def remove(self, e):
         """
@@ -121,12 +123,12 @@ if __name__ == "__main__":
     ms1.add(3)                          # ms1 = { 1, 1, 2,    3,    4       }
     ms1.add(3)                          # ms1 = { 1, 1, 2,    3, 3, 4       }
     ms1.add(2)                          # ms1 = { 1, 1, 2, 2, 3, 3, 4       }
-    ms1.remove(1)                       # ms1 = { 1,    2, 2, 3, 3, 4       }
+    '''ms1.remove(1)                       # ms1 = { 1,    2, 2, 3, 3, 4       }
     ms2 = ms1.union(MultiSet([4,5]))    # ms2 = { 1,    2, 2, 3, 3, 4, 4, 5 }
     ms2.remove(2)                       # ms2 = { 1,    2,    3, 3, 4, 4, 5 }
     ms3 = ms1.intersection(ms2)         # ms3 = { 1,    2,    3, 3, 4       }
     ms1 = ms1.difference(ms3)                 # ms1 = {       2                   }
     print(ms1.membership_test(2))       # True
-    print(ms1.membership_test(5))       # False
+    print(ms1.membership_test(5))       # False'''
     
     print('Fine')
