@@ -65,7 +65,10 @@ class MultiSet(object):
             if element e has multiplicity > 1
 
         """
-        pass
+        if self.lista.count(e) >= 1:
+            return True
+        else:
+            return False
 
     def union(self, ms):
         """
@@ -82,7 +85,11 @@ class MultiSet(object):
         new_ms : Multiset
             the union between the object and ms
         """
-        pass
+        l = self.lista + ms.lista
+        l.sort()
+        new_ms = MultiSet(l)
+
+        return new_ms
 
     def intersection(self, ms):
         """
