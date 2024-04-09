@@ -47,7 +47,8 @@ class MultiSet(object):
         None.
 
         """
-        pass
+        if e in self.lista:
+            self.lista.pop(e)
 
     def membership_test(self, e):
         """
